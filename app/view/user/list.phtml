@@ -1,0 +1,11 @@
+<?php
+/** @var \App\Model\User[] $users */
+?>
+
+<?php if(!empty($users)):?>
+    <?php foreach ($users as $user): ?>
+        #<?= $user->getId() ?>  <img src="<?=$user->getAvatarUrl();?>"> <?=$user->getName();?> <?=$user->getBithday();?><br>
+    <?php endforeach; ?>
+<?php else: ?>
+    Пользователей нет
+<?php endif; ?>

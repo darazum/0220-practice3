@@ -1,0 +1,10 @@
+<?php /** @var \App\Model\File[] $files */ ?>
+
+<? if(!empty($files)):?>
+    <? foreach ($files as $file): ?>
+        #<?= $file->getId() ?> <?=$file->name;?> <?=$file->upload_at;?><br>
+    <? endforeach; ?>
+<? else: ?>
+    Пользователей нет
+<? endif; ?>
+
